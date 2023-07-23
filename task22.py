@@ -11,8 +11,8 @@
 
 from random import randint
 
-a = {11, 6, 2, 4, 6, 8, 10, 12, 10, 8, 6, 4, 2}
-b = {3, 6, 9, 12, 15, 18}
+# a = {11, 6, 2, 4, 6, 8, 10, 12, 10, 8, 6, 4, 2}
+# b = {3, 6, 9, 12, 15, 18}
 
 a = int(input('Введите количество элементов первого множества: '))
 b = int(input('Введите количество элементов второго множества: '))
@@ -28,8 +28,10 @@ for i in range(b):
 
 print(f'{number_set_1},\n{number_set_2}')   # Выводим списки на экран
 
+
 number_set_1 = set(number_set_1)            # Меняем тип коллекции со списка на множество
 number_set_2 = set(number_set_2)            
 
 result = number_set_1.intersection(number_set_2)  # Используем метод intersection() пересечения множеств
+result = sorted(result)                           # Используем метод sorted()
 print(result)
